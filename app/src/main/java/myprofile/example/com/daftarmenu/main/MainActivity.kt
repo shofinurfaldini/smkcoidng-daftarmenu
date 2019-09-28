@@ -1,18 +1,18 @@
-package myprofile.example.com.daftarmenu
+package myprofile.example.com.daftarmenu.main
 
-import android.app.Fragment
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import kotlinx.android.synthetic.main.activity_main.tabs_main
 import kotlinx.android.synthetic.main.activity_main.viewpager_main
+import myprofile.example.com.daftarmenu.R.layout
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(layout.activity_main)
 
         viewpager_main.adapter=ViewPagerAdapter(supportFragmentManager)
         tabs_main.setupWithViewPager(viewpager_main)
