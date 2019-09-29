@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.minuman_fragmen.rv_minuman
 import myprofile.example.com.daftarmenu.R.layout
 import myprofile.example.com.daftarmenu.adapter.RvAdapterMakanan
+import myprofile.example.com.daftarmenu.adapter.RvAdapterMinuman
+import myprofile.example.com.daftarmenu.data.MenuMinumanModel
 import myprofile.example.com.daftarmenu.data.MenuModel
 
 class MinumanFragmen :Fragment () {
@@ -19,8 +21,8 @@ class MinumanFragmen :Fragment () {
         }
     }
 
-    val dataMinuman = mutableListOf<MenuModel>()
-    val rvAdapter = RvAdapterMakanan(dataMinuman)
+    val dataMinuman = mutableListOf<MenuMinumanModel>()
+    val rvAdapter = RvAdapterMinuman(dataMinuman)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(

@@ -7,10 +7,10 @@ import androidx.room.PrimaryKey
 @Entity
 data class MenuModel (
     @PrimaryKey(autoGenerate = true)
-    var idMenuModel: Int,
+    var idMenuModel: Int?=null,
     var namaMenu:String,
     var hargaMenu:String,
     @ColumnInfo(typeAffinity = ColumnInfo.BLOB)
-    var gambarMenu:Byte
+    var gambarMenu:ByteArray?
 )
 
